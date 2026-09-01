@@ -4,7 +4,7 @@ project(
   license: 'GPL-2.0-only',
   # license_files: ['COPYING'], -- needs Meson 1.1, Ubuntu 22.04 is too old
   meson_version: '>= 0.61',
-  version: '3.1-dev',
+  version: '3.1-dev', # Please keep in sync with "PROJECT_NUMBER" in Doxyfile
 )
 
 i18n = import('i18n')
