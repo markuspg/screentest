@@ -22,6 +22,7 @@ localedir = join_paths(prefix, get_option('localedir'))
 
 config_h = configuration_data()
 config_h.set_quoted('DATADIR', datadir)
+config_h.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 config_h.set_quoted('LOCALEDIR', localedir)
 config_h.set_quoted('PACKAGE', meson.project_name())
 config_h.set_quoted('PACKAGE_NAME', meson.project_name())
