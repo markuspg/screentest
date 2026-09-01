@@ -120,6 +120,8 @@ G_MODULE_EXPORT void on_mode_change(GtkMenuItem *menuitem,
           test_name);
       gtk_window_set_title(GTK_WINDOW(dialog), PACKAGE_NAME);
       gtk_dialog_run(GTK_DIALOG(dialog));
+      gtk_widget_destroy(dialog);
+      dialog = NULL;
       gtk_main_quit();
     }
     free(test_struct);

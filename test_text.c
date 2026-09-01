@@ -78,6 +78,10 @@ static void text_draw(GtkWidget *widget, cairo_t *cr) {
   pango_layout_set_text(pl, dtext->str, -1);
   pango_cairo_show_layout(cr, pl);
 
+  g_string_free(dtext, TRUE);
+  dtext = NULL;
+  g_object_unref(pl);
+  pl = NULL;
   pango_font_description_free(pft);
   pft = NULL;
 }

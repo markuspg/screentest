@@ -160,6 +160,9 @@ static void basic_draw(GtkWidget *widget, cairo_t *cr) {
   cairo_new_sub_path(cr);
   cairo_arc(cr, w / 2, h / 2, d, 0, 2 * G_PI);
   cairo_stroke(cr);
+
+  g_object_unref(pl);
+  pl = NULL;
 }
 
 G_MODULE_EXPORT struct test_ops basic_ops = {
