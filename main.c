@@ -20,12 +20,11 @@
 
 #include <config.h>
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <stdlib.h>
 
-#include "gettext.h"
 #include "main.h"
-#define _(String) gettext(String)
 
 GtkBuilder *builder;
 

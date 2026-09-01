@@ -21,14 +21,12 @@
 
 #include <config.h>
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <stdio.h>
 
 #include "callbacks.h"
-#include "gettext.h"
 #include "screentest_colors.h"
-#define _(String) gettext(String)
-#define N_(String) gettext_noop(String)
 
 #define BASIC_STEP 40
 
