@@ -90,7 +90,7 @@ static void basic_draw(GtkWidget *widget, cairo_t *cr) {
   maxheight = 0;
   maxwidth = 0;
   for (i = 0; i < 7; i++) {
-    pango_layout_set_text(pl, gettext(text[i]), -1);
+    pango_layout_set_text(pl, _(text[i]), -1);
     pango_layout_get_extents(pl, &ink_rect, NULL);
     double x = pango_units_to_double(ink_rect.height);
     if (x > maxheight)
@@ -119,25 +119,25 @@ static void basic_draw(GtkWidget *widget, cairo_t *cr) {
   screentest_set_color_fg(cr);
 
   cairo_move_to(cr, (w - widths[0]) / 2, d / 2 - 4 * maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[0]), -1);
+  pango_layout_set_text(pl, _(text[0]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[1]) / 2, d / 2 - maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[1]), -1);
+  pango_layout_set_text(pl, _(text[1]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[2]) / 2, d / 2 + 2 * maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[2]), -1);
+  pango_layout_set_text(pl, _(text[2]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[3]) / 2, d / 2 + 5 * maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[3]), -1);
+  pango_layout_set_text(pl, _(text[3]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[4]) / 2, h - d / 2 - 4 * maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[4]), -1);
+  pango_layout_set_text(pl, _(text[4]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[5]) / 2, h - d / 2 - maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[5]), -1);
+  pango_layout_set_text(pl, _(text[5]), -1);
   pango_cairo_show_layout(cr, pl);
   cairo_move_to(cr, (w - widths[6]) / 2, h - d / 2 + 2 * maxheight / 3);
-  pango_layout_set_text(pl, gettext(text[6]), -1);
+  pango_layout_set_text(pl, _(text[6]), -1);
   pango_cairo_show_layout(cr, pl);
 
   b = 7 * d / 4;
