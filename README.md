@@ -67,10 +67,10 @@ Set it up for your system:
 
 ### 2. COMPILING THE PROGRAM
 
-Run "meson compile". This will compile the "screentest" program. Since the
-program is mostly standalone, you can now verify their function by running them
-in the current directory (calling "./screentest").
+Run "meson compile -C builddir". This will compile the "screentest" program.
+Since the program is mostly standalone, you can now verify their function by
+running them in the current directory (calling "./screentest").
 
 ### 3. INSTALLING
 
-Run "meson install".
+Run "meson install -C builddir".
