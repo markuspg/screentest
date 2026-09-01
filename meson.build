@@ -18,7 +18,7 @@ screentest_deps = [
 
 prefix = get_option('prefix')
 datadir = join_paths(prefix, get_option('datadir'))
-localedir = join_paths(datadir, 'local')
+localedir = join_paths(prefix, get_option('localedir'))
 
 config_h = configuration_data()
 config_h.set_quoted('DATADIR', datadir)
