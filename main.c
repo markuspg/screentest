@@ -20,21 +20,22 @@
 
 #include <config.h>
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <locale.h>
 #include <stdlib.h>
 
-#include "gettext.h"
 #include "main.h"
-#define _(String) gettext(String)
 
 GtkBuilder *builder;
 
 int main(int argc, char *argv[]) {
   guint err;
 
-  bindtextdomain(PACKAGE, LOCALEDIR);
-  bind_textdomain_codeset(PACKAGE, "UTF-8");
-  textdomain(PACKAGE);
+  setlocale(LC_ALL, "");
+  bindtextdomain(GETTEXT_PACKAGE, LOCALEDIR);
+  bind_textdomain_codeset(GETTEXT_PACKAGE, "UTF-8");
+  textdomain(GETTEXT_PACKAGE);
 
   gtk_init(&argc, &argv);
 

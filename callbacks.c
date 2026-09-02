@@ -20,16 +20,14 @@
 
 #include <config.h>
 
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #include "callbacks.h"
-#include "gettext.h"
 #include "main.h"
 #include "screentest_colors.h"
-#define _(String) gettext(String)
 
 int fg_count = SCREENTEST_COLORS_WHITE;
 
