@@ -52,6 +52,10 @@ int main(int argc, char *argv[]) {
           "Please make sure this program is installed correctly."));
     gtk_window_set_title(GTK_WINDOW(dialog), PACKAGE_NAME);
     gtk_dialog_run(GTK_DIALOG(dialog));
+    gtk_widget_destroy(dialog);
+    dialog = NULL;
+    g_object_unref(builder);
+    builder = NULL;
     exit(1);
   }
 
@@ -59,5 +63,7 @@ int main(int argc, char *argv[]) {
 
   gtk_widget_show_all(GTK_WIDGET(gtk_builder_get_object(builder, "mainwin")));
   gtk_main();
+  g_object_unref(builder);
+  builder = NULL;
   return 0;
 }
